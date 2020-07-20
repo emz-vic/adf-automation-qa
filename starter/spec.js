@@ -32,6 +32,7 @@ describe('Test', () => {
         login.usernameInput.sendKeys('guest@example.com');
         login.passwordInput.sendKeys('Password');
         login.signInBtn.click();
+
         browser.waitForAngular();
 
         expect(login.userContainter.isDisplayed()).toBe(true, 'User is not logged in.');
@@ -47,6 +48,7 @@ describe('Test', () => {
         createNewFolder.createNewFolderDialogNameInput.sendKeys(newFolderName);
         createNewFolder.createNewFolderDialogCreateBtn.click();
         browser.waitForAngular();
+
         expect(createNewFolder.getRowByFolderName(newFolderName).getText()).toEqual(newFolderName, 'Folder is not created.');
     });
 
@@ -60,7 +62,9 @@ describe('Test', () => {
         createNewFolder.createNewFolderBtn.click();
         createNewFolder.createNewFolderDialogNameInput.sendKeys(newFolderName);
         createNewFolder.createNewFolderDialogCreateBtn.click();
+
         expect(base.getSnackBarByText(sameFolderNameErr).isDisplayed()).toBe(true, 'Error message for creating a folder with an existing name is not displayed.');
+
         createNewFolder.createNewFolderDialogCancelBtn.click();
     });
 
@@ -69,6 +73,7 @@ describe('Test', () => {
         const deleteFolder = new DeleteFolder();
 
         createNewFolder.getRowByFolderName(newFolderName).click();
+
         expect(deleteFolder.selectedFolderRowName.getText()).toEqual(newFolderName);
 
         deleteFolder.selectedFolderRowActionsMenu.click();

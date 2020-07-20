@@ -1,4 +1,5 @@
 export default class DeleteFolder {
+
     get selectedFolderRow() {
         return element(by.css('adf-datatable-row.adf-is-selected'));
     }

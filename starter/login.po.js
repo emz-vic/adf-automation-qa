@@ -1,4 +1,5 @@
 export default class Login {
+
     get usernameInput() {
         return element(by.css('input[data-automation-id=username]'));
     }

@@ -1,4 +1,5 @@
 export default class Settings {
+
     get providerSelect() {
         return element(by.id('adf-provider-selector'));
     }

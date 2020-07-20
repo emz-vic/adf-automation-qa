@@ -1,4 +1,5 @@
 export default class CreateNewFolder {
+
     get createNewFolderBtn() {
         return element(by.css('button[data-automation-id=create-new-folder]'));
     }

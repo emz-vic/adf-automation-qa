@@ -1,8 +1,3 @@
-## Prerequisites
-- install Node 
-- `npm install -g protractor` to install protractor
-- `npm install` to install the project dependencies
-
 ## Description
 - open cmd and go to the location where the file conf.js is located
 - to run tests run command: `protractor conf.js`
@@ -13,3 +8,8 @@
 - Depending on the test steps and needed elements, each class is instanced in the test.
 - I used mostly the css selector data-automation-id, because I expect that this won't be changed so often.
 - The purpose of this approach is to achieve an easily maintainable framework.
+
+## Prerequisites
+- install Node 
+- `npm install -g protractor` to install protractor
+- `npm install` to install the project dependencies

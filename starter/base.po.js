@@ -1,4 +1,5 @@
 export default class Base {
+
     navigateToSettingsPage() {
         return browser.get('http://qaexercise.envalfresco.com/settings');
     }
